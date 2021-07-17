@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login User&Password</h1>
+    <form>
+    <table border="1"> <!--input username-->
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" name="inputusername" pattern="(\d)([a-z])([A-Z]).{8,}" title="Error" autofocus required></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="inputpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Error" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">กรุณาพิมตามตัวเลขที่ปรากฏ: <br>1559<br><input type="text" name="inputnumber1559" pattern="[0-9]{4}" title="Error" required></td>
+        </tr>
+    </table>
+    </form>
+    <a href="./Lap3 ex3.2page2  logincomplete.html"><input type="image" name="logincomplete" value="submit" src="./login icon.png" width="50" height="50" alt="submit"></a>
+</body>
+</html>

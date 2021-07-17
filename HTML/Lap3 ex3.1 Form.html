@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Exercise</title>
+</head>
+<body>
+    <form > <!--Personal information-->
+        <fieldset>
+            <legend>Personal information</legend>
+            ชื่อ-สกุล:<br> <input type="text" name="ชื่อ-สกุล" required placeholder="ชื่อ-สกุล" pattern="^[a-zA-Z\s]+$" title="Error">*<br>
+            Email:<br> <input type="email" name="Email" required placeholder="@hotmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Error">*<br>
+            Number:<br><input type="text" name="number" required value="+66" pattern="+0-9.{12}">*<br>
+            ที่อยู่:<br><textarea rows="5" cols="30"></textarea><br>
+            รหัสไปรษณีย์: <br><input type="text" name="รหัสไปรษณีย์" pattern="[\d{5}]" title="Error"><br>
+            รูปผู้จอง: <input type="file" name="file">
+        </fieldset>
+        <fieldset> <!--Login-->
+            <legend>Login</legend>
+            Username:<br><input type="text" name="Username" pattern="(\d)([a-z])([A-Z]).{8,20}" title="Error">
+            <p><i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ ตั้งแต่ 8 ตัวขึ้นไป</i></p><br>
+            Password:<br><input type="password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Error">
+            <p><i>จะต้องมี 8 หรือมากกว่าตัวอักษรที่มีจำนวนอย่างน้อยหนึ่งและเป็นหนึ่งในตัวพิมพ์ใหญ่และพิมพ์เล็กตัวอักษร</i></p>
+        </fieldset>
+        <fieldset> <!--Information of Packet-->
+            <legend>Information of Packet</legend>
+            แพคเก็จทัวร์: <select name="Packet">
+                <option value=" "> </option>
+                <option value="Japan">Japan</option>
+                <option value="UK">UK</option>
+                <option value="USA">USA</option>
+            </select><br>
+            วันเดือนทาง: <input type="date" name="date"><br>
+            จำนวนผู้เดินทาง: <input type="number" name="จำนวนผู้เดินทาง" max=10 min=1 value="1"><br>
+            เน้นการท่องเที่ยวแบบใด?<br> 
+                <input type="checkbox" name="Tourtype" value="ชอปปิ้ง">ช้อปปิง<br>
+                <input type="checkbox" name="Tourtype" value="ธรรมชาติ">ธรรมชาติ<br>
+                <input type="checkbox" name="Tourtype" value="ทะเล">ทะเล
+        </fieldset>
+        <br> <!--Submit-->
+        ยอมรับเงื่อนไขและข้อตกลง 
+            <input type="radio" name="agree_disagree" value="I agree">I agree
+            <input type="radio" name="agree_disagree" value="I disagree">I disagree
+            <input type="submit" value="submit">
+    </form>
+</body>
+</html>
