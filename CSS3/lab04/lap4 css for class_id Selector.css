@@ -1,0 +1,14 @@
+.yellow-bg { /*Class yellow-bg*/
+    background-color: yellow;
+    text-decoration: underline;
+}
+
+.gray-bg {
+    background-color: gray;
+}
+
+#year { /*id year*/
+    font-style: initial;
+    font-weight: bold;
+    color: red;
+}
