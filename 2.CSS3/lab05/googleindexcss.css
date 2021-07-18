@@ -1,0 +1,22 @@
+#corner {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 20em;    
+}
+#logo{
+    margin: 250px auto 0 auto; /*T R B L*/
+    padding: 3rem;
+    display: flex;
+}
+#keyword-box{
+    margin:-20px auto 0 auto;
+    width: 450px;
+    height: 20px;
+    display: flex;
+}
+#button-group{
+    padding: 3rem;
+    margin: -30px auto 0 775px;
+    display: flex;
+}

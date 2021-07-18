@@ -1,0 +1,16 @@
+#nav {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+#result-box{
+    margin-left: 140px;
+}
+.green-text{
+    color: green;
+}
+.gray-text{
+    color: gray;
+}
+.snippet{
+    margin-top: 20px;
+}
