@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <script>
+        let person = [
+            {
+                fullname: "นายกานต์ กัลปดี",
+                weight: 76,
+                height: 172
+            },
+            {
+                fullname: "นางสาวปาริฉัตร นามวิเชียร",
+                weight: 46,
+                height: 150
+            },
+            {
+                fullname: "นางสาวญาดาวี นรชาญ",
+                weight: 43,
+                height: 156
+            }
+        ]
+        function bmical(weight,height){
+            var bmi = weight/((height/100)**2)
+                if (bmi>40) {
+                    comment = 'ผลการวิเคราะห์ อ้วนขั้นสูงสุด';
+                } else if (bmi>35){
+                    comment = 'ผลการวิเคราะห์ อ้วนขั้นขั้นที่ 2';
+                } else if (bmi>28.5){
+                    comment = 'ผลการวิเคราะห์ อ้วนขั้นขั้นที่ 1';
+                } else if (bmi>23.5){
+                    comment = 'ผลการวิเคราะห์ น้ำหนักเกินเกณฑ์';
+                } else if (bmi>18.5){
+                    comment = 'ผลการวิเคราะห์ น้ำหนักปกติ';
+                } else {
+                    comment = 'ผลการวิเคราะห์ น้ำหนักต่ำกว่าเกณฑ์';
+                }
+            return "มีค่า bmi = "+ bmi +' '+ comment
+        }
+        for (let i in person){
+            var personweight = person[i].weight
+            var personheight = person[i].height
+            let answer = bmical(personweight,personheight)
+            console.log(person[i].fullname, answer)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

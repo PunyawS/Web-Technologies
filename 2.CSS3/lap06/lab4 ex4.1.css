@@ -1,0 +1,37 @@
+body {
+    background-image: url(../lap06/pexels-maryann-kariuki-4118248.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#header {
+    margin: 0 auto;
+    padding: 10px 20px 1px 20px;
+    text-align: right;
+    font-weight: bold;
+    background-color: gray;
+    width: 95%;
+    height: 30px;
+}
+
+a {
+    font-family: 'Zen Loop', cursive;;
+    color: white;
+    text-decoration: none; /*Remove under line*/
+}
+#contentname{
+    margin-top: 500px;
+    font-family: 'Zen Loop', cursive;;
+    color: aliceblue;
+    font-size: larger;
+    text-align: center;
+    font-size: 20px;
+}
+
+#contentinfo{
+    font-family: 'Zen Loop', cursive;;
+    color: whitesmoke;
+    font-size: 18px;
+    text-align: center;
+}
