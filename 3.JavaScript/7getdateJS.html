@@ -8,13 +8,13 @@
 </head>
 <body>
     <script>
-        let d = new Date();
-        d.getDate()
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0'); //padstart(padlength, '0') print 01-31
+        let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        let yyyy = today.getFullYear();
 
-        console.log(d)
-
-        let [month, date, year]    = new Date().toLocaleDateString("en-US").split("/")
-        console.log([month, date, year])
+        today = mm + '/' + dd + '/' + yyyy;
+        console.log(today)
     </script>
 </body>
 </html>

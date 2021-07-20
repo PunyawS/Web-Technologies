@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script> //Even in JS
+        window.onload = function(){
+            let planet = document.getElementById("blueplanet")
+            planet.innerHTML = "Red Alert"
+            alert('Loaded Success')
+        }
+    </script> -->
+    <script> //Even in HTML
+        function init(){
+            let planet = document.getElementById("blueplanet")
+            planet.innerHTML = "Red Alert"
+            alert('Loaded Success')
+    }
+    </script>
+</head>
+<body onload="init()"> <!-- Even in HTML -->
+    <p id="greenplanet">All is well</p>
+    <p id="redplanet">Nothing to report</p>
+    <p id="blueplanet">All systems OK</p>
+</body>
+</html>

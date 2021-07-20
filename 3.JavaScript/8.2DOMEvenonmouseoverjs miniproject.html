@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Even on mouseover js miniproject</title>
+    <script>
+        function showsong(){
+            let song_1 = document.getElementById('song1')
+            let song_2 = document.getElementById('song2')
+            let song_3 = document.getElementById('song3')
+            song_1.innerHTML = ('Peaches')
+            song_2.innerHTML = ('Intentions')
+            song_3.innerHTML = ('Leave the Door Open')
+        }
+        window.onload = function(){
+            let top_chart = document.getElementById('clickshowsong')
+            top_chart.onclick = showsong
+        }
+    </script>
+</head>
+<body>
+    <h1 id="clickshowsong">Top Chart</h1>
+    <ul id="playlist">
+        <li id="song1"></li>
+        <li id="song2"></li>
+        <li id="song3"></li>
+    </ul> 
+</body>
+</html>
