@@ -10,23 +10,39 @@
     <script>
 
         let myJSON = {
-            "outerObject": [
-                {
-                    "NestedObjects": [{ //Array,Object
-                            "somename1" : "somevale1"
-                        },
-                        {
-                            "somename2" : "somevalue2"
-                        },
-                        {
-                            "somename3" : "somevalue3"
-                        }
-                    ]
-                }
-
-            ]
-        }
-            
+            "Category": "Tutorials",
+                "Articles": [{
+                    "Name" : "JSON TEST",
+                    "Share" : [{
+                        "SocialNetwork" : "Facebook"
+                    },
+                    {
+                        "SocialNetwork" : "Twitter"
+                    },
+                    {
+                        "SocialNetwork" : "Instagram"
+                    },
+                    {
+                        "SocaiNetwork"  : "Onlyfan"
+                    }
+                ]
+            },
+            {
+                    "Name" : "JS TEST",
+                    "Share" : [{
+                        "SocialNetwork" : "Facebook"
+                    },
+                    {
+                        "SocialNetwork" : "Twitter"
+                    },
+                    {
+                        "SocaiNetwork"  : "Onlyfan"
+                    }
+                ]
+            }
+        ]
+    }
+        console.log(myJSON.Articles[1].Share)
     </script>
 </body>
 </html>

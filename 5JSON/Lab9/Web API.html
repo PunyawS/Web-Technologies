@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API</title>
+    <script>
+        async function getDataAPI(){
+            let response = await fetch('https://opend.openservice.in.th/search_virtuoso/api/dataset/query?dsname=vir_9_1519461425&path=vir_9_1519461425&property=col_2&operator=EQUALS&valueLiteral=2556&loadAll=1&type=json&limit=100&offset=0')
+            let rawdata = await response.text()
+            let objectdata = JSON.parse(rawdata)
+            let result = document.getElementById('column') //table
+            
+            for (let i = 0; i < objectdata.data.length; i++) {
+                let content1 = objectdata.data[i].province
+                let content2 = objectdata.data[i].year
+                let content3 = objectdata.data[i].debt_value
+
+                let tr = document.createElement('tr')
+                let th1 = document.createElement('th')
+                let th2 = document.createElement('th')
+                let th3 = document.createElement('th')
+                th1.innerHTML = content1
+                th2.innerHTML = content2
+                th3.innerHTML = content3
+                result.appendChild(tr)
+                result.appendChild(th1)
+                result.appendChild(th2)
+                result.appendChild(th3)
+                // result.appendChild(th1)
+                // result.appendChild(th2)
+                // result.appendChild(th3)
+            }
+
+            console.log(objectdata.data)
+        }
+
+        getDataAPI()
+    </script>
+</head>
+<body>
+    <table border="1" id="column">
+        <!-- <tr>
+            <th>col1</th>
+            <th>col2</th>
+            <th>col3</th>
+        </tr> -->
+    </table>
+</body>
+</html>
